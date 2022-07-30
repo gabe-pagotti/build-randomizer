@@ -3,18 +3,23 @@
 </script>
 
 <template>
-    <nav></nav>
+    <nav>
+        <NavLink/>
+        <NavLink/>
+    </nav>
 </template>
 
 <style scoped>
     nav {
-        height: 100%;
-        width: 15%;
+        padding-top: 14vh;
+        height: 100vh;
+        width: 15vw;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
         background-color: #77888f69;
-        overflow-x: hidden;
+        overflow: hidden;
+        min-width: 10rem;
     }
 </style>
