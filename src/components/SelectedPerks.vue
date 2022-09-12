@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="grid grid-rows-1  grid-cols-4 grid-flow-col row-span-1 bg-green-500/50">
+    <div class="row-span-1 bg-green-500/50 p-10">
         <PerkIcon/>
         <PerkIcon/>
         <PerkIcon/>
