@@ -14,6 +14,9 @@ module.exports = {
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",
         'shop-icon': "url('/images/icons/shop.png')",
       },
+      backgroundSize: {
+        '110': '110%',
+      },
     },
   },
   plugins: [],
