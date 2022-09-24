@@ -3,25 +3,29 @@
 </script>
 
 <template>
-    <div class="row-span-2">
-        <div>
-            <div class="hex"></div>
-            <div class="relative middle">
-                <img class="absolute w-[125px]" src="/images/icons/offerings/iconFavors_ardentRavenWreath_lg.png">
+    <div class="row-span-2 m-40">
+        <!-- First try, wrong animation -->
+        <div class="relative w-0 group bg-blue-500">
+            <div class="group hex">
+                <div class="absolute rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[80px] bottom-[105px]  group-hover:w-[64px] group-hover:left-[47px]"></div>
+                <div class="absolute -rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[25px] bottom-[105px] group-hover:w-[64px] group-hover:left-[-7px]"></div>
             </div>
-            <div class="hex2"></div>
+            <div class="relative middle">
+                <div class="absolute bg-white w-0.5 h-0 left-[-3px] top-1/2 transition-all duration-500 group-hover:h-[61px] group-hover:top-0"></div>
+                <div class="absolute bg-white w-0.5 h-0 right-[-3px] top-[32px] transition-all duration-500 group-hover:h-[61px] group-hover:top-0"></div>
+                <img class="absolute" src="/images/icons/offerings/iconFavors_ardentRavenWreath_lg.png">
+            </div>
+            <div class="hex2">
+                <div class="absolute rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[25px] bottom-[13px]  group-hover:w-[64px] group-hover:left-[-7px]"></div>
+                <div class="absolute -rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[80px] bottom-[13px] group-hover:w-[63px] group-hover:left-[48px]"></div>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
     img {
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: -38%;
-  text-align: center;
-  z-index: 1;
+        top: -38%;
     }
     .hex {
         width: 0;
