@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex-row w-8/12">
+    <div class="flex-row w-1/2">
         <TopSection/>
         <SelectedPerks/>
         <StuffList/>
