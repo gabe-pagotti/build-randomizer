@@ -9,13 +9,13 @@ module.exports = {
       backgroundImage: {
         'loadout': "url('/images/loadout-2.jpg')",
         'kinship': "url('/images/survivor/perks/camaraderie.png')",
-        'character-icon': "url('/images/icons/character.png')",
+        'character-icon': "url('/images/icons/PanelScreen_I55.png')",
         'build-icon': "url('/images/icons/build.png')",
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",
         'shop-icon': "url('/images/icons/shop.png')",
       },
       backgroundSize: {
-        '110': '110%',
+        '70%': '70%',
       },
       spacing: {
         '22': '5.5rem',
