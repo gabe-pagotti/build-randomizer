@@ -1,19 +1,46 @@
 <script>
 export default {
+    emits: ['selected'],
     props: {
         "item": Object
     },
     data() {
-        return {}
+        return {
+            selected: false,
+        }
     },
     methods: {
+        toggleSelected() {
+            this.selected = !this.selected;
+
+            // TODO: Adicionar img das setas que indicam a selecao
+            let divs = this.$el.querySelectorAll("div.absolute"),
+                add = "bg-white",
+                remove = "bg-red-500";
+
+            if (this.selected) {
+                this.$emit('selected')
+                add = "bg-red-500";
+                remove = "bg-white";
+            }
+
+            divs.forEach(div => {
+                div.classList.add(add);
+                div.classList.remove(remove);
+            });
+        }
     },
+    computed: {
+        isSelected() {
+            return this.selected;
+        }
+    }
 }
 </script>
 
 <template>
-    <div class="relative group w-0">
-        <div class="group hex">
+    <div class="relative cursor-pointer group" @click="toggleSelected">
+        <div class="top-triangle">
             <div class="absolute rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[50px] bottom-[120px] group-hover:w-[63px] group-hover:bottom-[105px] group-hover:left-[46px]"></div>
             <div class="absolute -rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[51px] bottom-[120px] group-hover:w-[62px] group-hover:bottom-[105px] group-hover:left-[-6px]"></div>
         </div>
@@ -23,7 +50,7 @@ export default {
 
             <img class="absolute drop-shadow-2xl" :src="this.item.iconUrl">
         </div>
-        <div class="hex2">
+        <div class="bottom-triangle">
             <div class="absolute rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[-2px] bottom-[28px]  group-hover:w-[63px] group-hover:left-[-6px] group-hover:bottom-[13px]"></div>
             <div class="absolute -rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[105px] bottom-[29px] group-hover:w-[60px] group-hover:bottom-[13px] group-hover:left-[49px]"></div>
         </div>
@@ -34,7 +61,7 @@ export default {
     img {
         top: -38%;
     }
-    .hex {
+    .top-triangle {
         width: 0;
         border-bottom: 30px solid #151;
         border-left: 52px solid transparent;
@@ -45,7 +72,7 @@ export default {
         height: 60px;
         background-color: #151;
     }
-    .hex2 {
+    .bottom-triangle {
         width: 0;
         border-top: 30px solid #151;
         border-left: 52px solid transparent;

@@ -1,5 +1,6 @@
 <script>
 export default {
+    emits: ['selected'],
     props: {
     },
     data() {
@@ -29,9 +30,9 @@ export default {
 </script>
 
 <template>
-    <div class="flex flex-col gap-3 w-1/2 mt-auto align-bottom pl-10">
+    <div class="flex flex-col gap-3 w-1/2 mt-auto align-bottom pl-10" >
         <h1 class="text-white text-bold">OFFERING</h1>
-        <Offering :item="this.getRadomOffering()"/>
+        <Offering :item="this.getRadomOffering()" @selected="$emit('selected', 'offering')"/>
     </div>
 </template>
 
