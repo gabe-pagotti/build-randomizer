@@ -8,7 +8,7 @@
         },
         methods: {
             followLink() {
-                this.$router.push(this.link)
+                this.$router.replace(this.link)
             }
         },
     }

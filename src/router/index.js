@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Loadout from '../components/Loadout.vue'
+import OfferingList from '../components/OfferingList.vue'
+import PerkList from '../components/PerkList.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +14,17 @@ const router = createRouter({
         {
             path: '/loadout',
             name: 'loadout',
-            component: Loadout
+            component: Loadout,
+            children: [{
+                path: 'offerings',
+                name: 'offerings',
+                component: OfferingList
+            },
+            {
+                path: 'perks',
+                name: 'perks',
+                component: PerkList
+            }],
         },
     ]
 })

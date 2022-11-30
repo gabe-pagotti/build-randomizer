@@ -1,11 +1,9 @@
 <script>
-
+    import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <div class="row-span-3 bg-blue-500/50">
-        <h1 class="text-white">AAAAAAAAAAAAAAAAAAAAAA</h1>
-    </div>
+    <RouterView/>
 </template>
 
 <style scoped>

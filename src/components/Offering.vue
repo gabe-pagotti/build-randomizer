@@ -19,7 +19,8 @@ export default {
                 remove = "bg-red-500";
 
             if (this.selected) {
-                this.$emit('selected')
+                this.$router.push('/loadout/offerings');
+
                 add = "bg-red-500";
                 remove = "bg-white";
             }
