@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-    <div class="flex flex-col gap-3 w-1/2 mt-auto align-bottom pl-10" >
+    <div class="flex flex-wrap flex-col content-around gap-3 w-1/2 mt-auto align-bottom">
         <h1 class="text-white text-bold">OFFERING</h1>
         <Offering :item="this.getRadomOffering()" @selected="$emit('selected', 'offering')"/>
     </div>

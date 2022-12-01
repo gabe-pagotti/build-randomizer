@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex justify-around gap-1 p-10 pr-60">
+    <div class="flex place-content-around gap-1 p-10 pr-36">
         <PerkIcon/>
         <PerkIcon/>
         <PerkIcon/>
