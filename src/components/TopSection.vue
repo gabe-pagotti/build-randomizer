@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="flex justify-around h-72 w-full gap-5">
+    <div class="flex justify-around h-72 w-full gap-7">
         <PowerItem />
         <OfferingContainer @selected="changeList" />
     </div>
