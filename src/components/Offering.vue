@@ -1,7 +1,7 @@
 <script>
 export default {
     props: {
-        "item": Object
+        "offering": Object
     },
     data() {
         return {
@@ -35,7 +35,7 @@ export default {
             <div class="absolute bg-white w-0.5 h-0 right-[-1px] bottom-[-1px] transition-all duration-500 group-hover:h-[62px]"></div>
 
             <img src="/images/icons/offering-active.png" class="absolute" id="active" v-show="isSelected">
-            <img class="absolute drop-shadow-2xl" id="icon" :src="this.item.iconUrl">
+            <img class="absolute drop-shadow-2xl" id="icon" :src="this.offering.iconUrl">
         </div>
         <div class="bottom-triangle">
             <div class="absolute rotate-[30deg] w-0 bg-white h-0.5 transition-all duration-500 left-[-2px] bottom-[28px]  group-hover:w-[63px] group-hover:left-[-6px] group-hover:bottom-[13px]"></div>

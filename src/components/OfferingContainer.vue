@@ -1,8 +1,5 @@
 <script>
 export default {
-    emits: ['selected'],
-    props: {
-    },
     data() {
         return {}
     },
@@ -32,7 +29,7 @@ export default {
 <template>
     <div class="flex flex-wrap flex-col content-around gap-3 w-1/2 mt-auto align-bottom">
         <h1 class="text-white text-bold">OFFERING</h1>
-        <Offering :item="this.getRadomOffering()" @selected="$emit('selected', 'offering')"/>
+        <Offering :offering="this.getRadomOffering()"/>
     </div>
 </template>
 
