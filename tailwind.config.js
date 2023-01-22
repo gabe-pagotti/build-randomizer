@@ -22,6 +22,9 @@ module.exports = {
       },
       boxShadow: {
         'lt': '-3px 3px 4px 4px rgba(0, 0, 0, 0.3)',
+      },
+      maxWidth: {
+        '52': '13rem',
       }
     },
   },

@@ -36,13 +36,13 @@ export default {
 
 <template>
     <div>
-        <div class="flex flex-wrap gap-3 p-10 pr-60 line-1 py-0 justify-start">
+        <div class="flex flex-wrap gap-3 pl-10 xl:pr-96 py-0 justify-start">
             <PerkIcon v-for="perk in this.perks" :perk="perk"></PerkIcon>
         </div>
-        <div class="flex flex-wrap gap-3 p-10 pr-60 line-2 py-0 justify-end">
+        <div class="flex flex-wrap gap-3 pl-10 xl:pr-96 py-0 justify-end">
             <PerkIcon v-for="perk in this.perks" :perk="perk"></PerkIcon>
         </div>
-        <div class="flex flex-wrap gap-3 p-10 pr-60 line-1 py-0 justify-start">
+        <div class="flex flex-wrap gap-3 pl-10 xl:pr-96 py-0 justify-start">
             <PerkIcon v-for="perk in this.perks" :perk="perk"></PerkIcon>
         </div>
     </div>
