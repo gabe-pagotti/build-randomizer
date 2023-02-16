@@ -9,8 +9,8 @@ export default {
                     iconUrl: "/images/icons/offerings/iconFavors_ardentRavenWreath_lg.png",
                 },
                 {
-                    name: 'Ardent Raven Wreath',
-                    description: 'Grants 100 % bonus Bloodpoints in the Deviousness Category.',
+                    name: 'Ivory Memento Mori',
+                    description: 'Grants the ability to kill one SurvivorIconHelpLoading survivor.png in the Dying State, who has progressed two Hook Stages.',
                     iconUrl: "/images/icons/offerings/iconFavors_momentoMoriIvory_lg.png",
                 },
                 {
@@ -19,8 +19,8 @@ export default {
                     iconUrl: "/images/icons/offerings/iconFavors_ardentRavenWreath_lg.png",
                 },
                 {
-                    name: 'Ardent Raven Wreath',
-                    description: 'Grants 100 % bonus Bloodpoints in the Deviousness Category.',
+                    name: 'Ivory Memento Mori',
+                    description: 'Grants the ability to kill one SurvivorIconHelpLoading survivor.png in the Dying State, who has progressed two Hook Stages.',
                     iconUrl: "/images/icons/offerings/iconFavors_momentoMoriIvory_lg.png",
                 },
                 {
