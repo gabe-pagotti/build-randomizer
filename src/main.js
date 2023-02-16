@@ -25,14 +25,33 @@ const store = createStore({
             },
             {
                 name: 'Ivory Memento Mori',
-                description: 'Grants the ability to kill one SurvivorIconHelpLoading survivor.png in the Dying State, who has progressed two Hook Stages',
+                description: 'Grants the ability to kill one SurvivorIconHelpLoading survivor.png in the Dying State, who has progressed two Hook Stages.',
                 rarity: 'Rare',
                 iconUrl: "/images/icons/offerings/iconFavors_momentoMoriIvory_lg.png",
-            }
+            },
+            {
+                name: 'Bloody Party Streamers',
+                description: 'Grants 100 % bonus Bloodpoints in all Categories to all Players.',
+                rarity: 'Rare',
+                iconUrl: "/images/icons/offerings/Anniversary/iconFavors_bloodyPartyStreamers_lg.png",
+            },
+            {
+                name: 'Bound Envelope',
+                description: 'Grants 25 % bonus Bloodpoints in all Categories to all Survivors.',
+                rarity: 'Rare',
+                iconUrl: "/images/icons/offerings/iconFavors_boundEnvelope_lg.png",
+            },
+            {
+                name: 'Fragrant Primrose Blossom',
+                description: 'Grants 100 % bonus Bloodpoints in the Altruism Category.',
+                rarity: 'Rare',
+                iconUrl: "/images/icons/offerings/iconFavors_fragrantPrimroseBlossoml_lg.png",
+            },
         ];
 
         return {
-            offering: offerings[Math.floor(Math.random() * offerings.length)]
+            offering: offerings[Math.floor(Math.random() * offerings.length)],
+            offerings: offerings,
         }
     },
     mutations: {
