@@ -9,16 +9,13 @@ export default {
     },
     methods: {
         select() {
-            if (this.isSelected) {
-                return;
-            }
-
+            this.$store.commit('setPerk', this.perk);
             this.$router.push('/loadout/perks');
         }
     },
     computed: {
         isSelected() {
-            return this.$route.name == 'perks';
+            return this.$store.state.selectedPerk.name == this.perk.name && this.$route.name == 'perks';
         }
     },
 }

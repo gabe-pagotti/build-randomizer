@@ -49,14 +49,55 @@ const store = createStore({
             },
         ];
 
+        let perks = [
+            {
+                name: 'Camaraderie',
+                description: 'The importance of friendship has given you strength. While you are on the Hook in the Struggle Phase, Kinship activates: If another Survivor is within 16 metres of your Hook while Kinship is active, the Struggle Phase timer is paused for 26/30/34 seconds.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/perks/camaraderie.gif",
+            },
+            {
+                name: 'Decisive Strike',
+                description: 'Using whatever is at hand, you stab your aggressor in an ultimate attempt to escape.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/perks/decisive-strike.gif",
+            },
+            {
+                name: 'Flashbang',
+                description: 'You have adapted to a world in chaos and making what you can from the debris.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/perks/flashbang.gif",
+            },
+            {
+                name: 'Up the Ante',
+                description: 'All will be well in the end; you just know it.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/perks/up-the-ante.gif",
+            },
+            {
+                name: 'Balanced Landing',
+                description: 'Your agility and cat-like relexes are incomparable.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/perks/balanced-landing.gif",
+            },
+        ];
+        const shuffledPerks = perks.sort(() => 0.5 - Math.random());
+        let selectedPerks = shuffledPerks.slice(0, 4);
+
         return {
             offering: offerings[Math.floor(Math.random() * offerings.length)],
             offerings: offerings,
+            selectedPerk: null,
+            selectedPerks: selectedPerks,
+            perks: perks,
         }
     },
     mutations: {
         setOffering (state, offering) {
             state.offering = offering;
+        },
+        setPerk (state, perk) {
+            state.selectedPerk = perk;
         }
     }
 })
