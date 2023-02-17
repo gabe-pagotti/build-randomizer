@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="flex flex-col gap-3 mt-auto align-bottom">
-        <h1 class="text-white text-bold">OFFERING</h1>
+        <h1 class="text-white font-bold">OFFERING</h1>
         <Offering :offering="this.$store.state.offering"/>
     </div>
 </template>
