@@ -33,6 +33,6 @@ export default {
         max-width: unset;
         width: 7.75rem;
         top: -13%;
-        left: -12%;
+        left: -5%;
     }
 </style>

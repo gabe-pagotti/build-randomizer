@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="w-1/2 bg-white/50">
+    <div class="w-2/3">
         Power or Item
     </div>
 </template>
