@@ -91,7 +91,7 @@ const store = createStore({
             {
                 name: 'Camping Aid Kit',
                 description: 'A rudimentary First Aid Kit which can save lives in emergencies, even if it\'s lacking some of its supplies.',
-                rarity: 'common',
+                rarity: 'Common',
                 iconUrl: "/images/survivor/item/camping-aid-kit.webp",
             },
         ];
@@ -100,13 +100,13 @@ const store = createStore({
             {
                 name: 'Gel Dressings',
                 description: 'A pack of gel forming pads used to patch up heavily exuding wounds.',
-                rarity: 'rare',
+                rarity: 'Rare',
                 iconUrl: "/images/survivor/item/addon/gel-dressings.webp",
             },
             {
                 name: 'Anti-Haemorrhagic Syringe',
                 description: 'An anti-haemorrhagic substance that stops the bleeding in a matter of seconds.',
-                rarity: 'ultra-rare',
+                rarity: 'Ultra Rare',
                 iconUrl: "/images/survivor/item/addon/syringe.webp",
             },
         ];
@@ -151,5 +151,28 @@ app.component('LeftNavBar', LeftNavBar)
    .component('PowerItemContainer', PowerItemContainer)
    .component('Addon', Addon)
    .component('AddonsContainer', AddonsContainer)
+   .mixin({
+        methods: {
+            getBackground: function (rarity) {
+                switch (rarity) {
+                    case 'Common':
+                        return 'bg-common';
+                    case 'Rare':
+                        return 'bg-rare';
+                    case 'Very Rare':
+                        return 'bg-very-rare';
+                    case 'Ultra Rare':
+                        return 'bg-ultra-rare';
+                    case 'Event':
+                        return 'bg-event';
+                    case 'Uncommon':
+                        return 'bg-uncommon';
+                    default:
+                        return 'bg-common';
+
+                }
+            },
+        },
+    });
 
 app.mount('#app')
