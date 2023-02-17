@@ -11,6 +11,9 @@ import NavLink from './components/NavLink.vue'
 import Offering from './components/Offering.vue'
 import OfferingContainer from './components/OfferingContainer.vue'
 import PowerItem from './components/PowerItem.vue'
+import PowerItemContainer from './components/PowerItemContainer.vue';
+import Addon from './components/Addon.vue';
+import AddonsContainer from './components/AddonsContainer.vue';
 
 import './assets/main.css'
 
@@ -84,12 +87,41 @@ const store = createStore({
         const shuffledPerks = perks.sort(() => 0.5 - Math.random());
         let selectedPerks = shuffledPerks.slice(0, 4);
 
+        let itens = [
+            {
+                name: 'Camping Aid Kit',
+                description: 'A rudimentary First Aid Kit which can save lives in emergencies, even if it\'s lacking some of its supplies.',
+                rarity: 'common',
+                iconUrl: "/images/survivor/item/camping-aid-kit.webp",
+            },
+        ];
+
+        let addons = [
+            {
+                name: 'Gel Dressings',
+                description: 'A pack of gel forming pads used to patch up heavily exuding wounds.',
+                rarity: 'rare',
+                iconUrl: "/images/survivor/item/addon/gel-dressings.webp",
+            },
+            {
+                name: 'Anti-Haemorrhagic Syringe',
+                description: 'An anti-haemorrhagic substance that stops the bleeding in a matter of seconds.',
+                rarity: 'ultra-rare',
+                iconUrl: "/images/survivor/item/addon/syringe.webp",
+            },
+        ];
+        const shuffledAddons = addons.sort(() => 0.5 - Math.random());
+
         return {
             offering: offerings[Math.floor(Math.random() * offerings.length)],
             offerings: offerings,
             selectedPerk: null,
             selectedPerks: selectedPerks,
             perks: perks,
+            itens: itens,
+            item: itens[Math.floor(Math.random() * itens.length)],
+            addons: addons,
+            selectedAddons: shuffledAddons.slice(0, 2),
         }
     },
     mutations: {
@@ -116,5 +148,8 @@ app.component('LeftNavBar', LeftNavBar)
    .component('Offering', Offering)
    .component('OfferingContainer', OfferingContainer)
    .component('PowerItem', PowerItem)
+   .component('PowerItemContainer', PowerItemContainer)
+   .component('Addon', Addon)
+   .component('AddonsContainer', AddonsContainer)
 
 app.mount('#app')

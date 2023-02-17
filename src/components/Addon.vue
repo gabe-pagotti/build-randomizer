@@ -1,7 +1,7 @@
 <script>
 export default {
     props: {
-        "item": Object
+        "addon": Object
     },
     data() {
         return {
@@ -15,14 +15,13 @@ export default {
 </script>
 
 <template>
-    <div class="grow">
-        <h1 class="text-white font-bold mb-3">POWER</h1>
-        <div class="relative w-22 h-22 cursor-pointer bg-cover bg-black group inline-block" :class="'bg-'+this.item.rarity">
+    <div>
+        <div class="relative w-20 h-20 cursor-pointer bg-cover bg-black group inline-block" :class="'bg-'+this.addon.rarity">
             <div class="absolute bg-white w-0 h-0.5 top-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
             <div class="absolute bg-white w-0 h-0.5 bottom-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
             <div class="absolute bg-white w-0.5 h-0 left-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
             <div class="absolute bg-white w-0.5 h-0 right-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
-            <img :src="this.item.iconUrl">
+            <img :src="this.addon.iconUrl">
         </div>
     </div>
 </template>

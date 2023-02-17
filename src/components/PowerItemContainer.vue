@@ -1,17 +1,19 @@
 <script>
+
 export default {
     props: {},
     data() {
         return {};
     },
     methods: {},
+    computed: {},
 }
 </script>
 
 <template>
-    <div class="flex h-72 w-full gap-7 xl:pr-20">
-        <PowerItemContainer />
-        <OfferingContainer/>
+    <div class="w-2/3 flex items-end justify-evenly gap-6 px-24">
+        <PowerItem :item="this.$store.state.item"/>
+        <AddonsContainer/>
     </div>
 </template>
 

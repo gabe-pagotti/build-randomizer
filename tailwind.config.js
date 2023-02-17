@@ -12,7 +12,10 @@ module.exports = {
         'build-icon': "url('/images/icons/build.png')",
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",
         'shop-icon': "url('/images/icons/shop.png')",
+        'common': "url('/images/bg-common.webp')",
+        'rare': "url('/images/bg-rare.webp')",
         'very-rare': "url('/images/bg-very-rare.webp')",
+        'ultra-rare': "url('/images/bg-ultra-rare.webp')",
         'offering-rare': "url('/images/bg-offering-rare.webp')",
       },
       backgroundSize: {
