@@ -54,31 +54,31 @@ const store = createStore({
                 name: 'Camaraderie',
                 description: 'The importance of friendship has given you strength. While you are on the Hook in the Struggle Phase, Kinship activates: If another Survivor is within 16 metres of your Hook while Kinship is active, the Struggle Phase timer is paused for 26/30/34 seconds.',
                 rarity: 'Very Rare',
-                iconUrl: "/images/survivor/perks/camaraderie.gif",
+                iconUrl: "/images/survivor/perks/camaraderie.png",
             },
             {
                 name: 'Decisive Strike',
                 description: 'Using whatever is at hand, you stab your aggressor in an ultimate attempt to escape.',
                 rarity: 'Very Rare',
-                iconUrl: "/images/survivor/perks/decisive-strike.gif",
+                iconUrl: "/images/survivor/perks/decisive-strike.png",
             },
             {
                 name: 'Flashbang',
                 description: 'You have adapted to a world in chaos and making what you can from the debris.',
                 rarity: 'Very Rare',
-                iconUrl: "/images/survivor/perks/flashbang.gif",
+                iconUrl: "/images/survivor/perks/flashbang.png",
             },
             {
                 name: 'Up the Ante',
                 description: 'All will be well in the end; you just know it.',
                 rarity: 'Very Rare',
-                iconUrl: "/images/survivor/perks/up-the-ante.gif",
+                iconUrl: "/images/survivor/perks/up-the-ante.png",
             },
             {
                 name: 'Balanced Landing',
                 description: 'Your agility and cat-like relexes are incomparable.',
                 rarity: 'Very Rare',
-                iconUrl: "/images/survivor/perks/balanced-landing.gif",
+                iconUrl: "/images/survivor/perks/balanced-landing.png",
             },
         ];
         const shuffledPerks = perks.sort(() => 0.5 - Math.random());

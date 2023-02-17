@@ -8,11 +8,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         'loadout': "url('/images/loadout-2.jpg')",
-        'kinship': "url('/images/survivor/perks/camaraderie.png')",
         'character-icon': "url('/images/icons/PanelScreen_I55.png')",
         'build-icon': "url('/images/icons/build.png')",
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",
         'shop-icon': "url('/images/icons/shop.png')",
+        'very-rare': "url('/images/bg-very-rare.webp')",
       },
       backgroundSize: {
         '70%': '70%',
