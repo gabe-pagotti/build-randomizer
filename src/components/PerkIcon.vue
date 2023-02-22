@@ -15,6 +15,10 @@ export default {
     },
     computed: {
         isSelected() {
+            if (this.$store.state.selectedPerk == null) {
+                return false;
+            }
+
             return this.$store.state.selectedPerk.name == this.perk.name && this.$route.name == 'perks';
         }
     },
@@ -29,6 +33,7 @@ export default {
                 <div class="absolute bg-white w-0 h-0.5 bottom-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
                 <div class="absolute bg-white w-0.5 h-0 left-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
                 <div class="absolute bg-white w-0.5 h-0 right-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
+                <img src="/images/icons/square-active.webp" class="absolute" id="active" v-show="isSelected">
                 <img :src="this.perk.iconUrl" class="rotate-45 scale-150">
             </a>
         </div>

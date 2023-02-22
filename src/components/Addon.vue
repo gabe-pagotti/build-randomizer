@@ -15,7 +15,11 @@ export default {
     },
     computed: {
         isSelected() {
-            return this.$store.state.addon.name == this.addon.name && this.$route.name == 'addons';
+            if (this.$store.state.selectedAddon == null) {
+                return false;
+            }
+
+            return this.$store.state.selectedAddon.name == this.addon.name && this.$route.name == 'addons';
         }
     },
 }
@@ -27,6 +31,7 @@ export default {
         <div class="absolute bg-white w-0 h-0.5 bottom-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
         <div class="absolute bg-white w-0.5 h-0 left-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
         <div class="absolute bg-white w-0.5 h-0 right-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>
+                <img src="/images/icons/square-active.webp" class="absolute" id="active" v-show="isSelected">
         <img :src="this.addon.iconUrl">
     </div>
 </template>
