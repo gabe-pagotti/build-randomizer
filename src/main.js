@@ -134,6 +134,24 @@ const store = createStore({
                 rarity: 'Ultra Rare',
                 iconUrl: "/images/survivor/item/addon/syringe.webp",
             },
+            {
+                name: 'Gauze Roll',
+                description: 'A sterile gauze used for a variety of wounds.',
+                rarity: 'Uncommon',
+                iconUrl: "/images/survivor/item/addon/gauze-roll.webp",
+            },
+            {
+                name: 'Butterfly Tape',
+                description: 'Medical quality tape used to close small wounds.',
+                rarity: 'Common',
+                iconUrl: "/images/survivor/item/addon/butterfly-tape.webp",
+            },
+            {
+                name: 'Abdominal Dressing',
+                description: 'A highly absorbent pad that prevents bodily fluid leakage when applied to large abdominal wounds.',
+                rarity: 'Rare',
+                iconUrl: "/images/survivor/item/addon/abdominal-dressing.webp",
+            },
         ];
         const shuffledAddons = addons.sort(() => 0.5 - Math.random());
 

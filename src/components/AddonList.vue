@@ -8,16 +8,10 @@ export default {
 </script>
 
 <template>
-    <div>
-        <div class="flex flex-wrap gap-3 pl-10 py-0 justify-start">
-            <Offering v-for="offering in this.$store.state.offerings" :offering="offering"></Offering>
-        </div>
-        <div class="flex flex-wrap gap-3 pl-4 py-0 justify-end">
-            <Offering v-for="offering in this.$store.state.offerings" :offering="offering"></Offering>
-        </div>
-        <div class="flex flex-wrap gap-3 pl-10 py-0 justify-start">
-            <Offering v-for="offering in this.$store.state.offerings" :offering="offering"></Offering>
-        </div>
+    <div class="flex flex-wrap px-40 py-0">
+        <Addon v-for="addon in this.$store.state.addons" :addon="addon"></Addon>
+        <Addon v-for="addon in this.$store.state.addons" :addon="addon"></Addon>
+        <Addon v-for="addon in this.$store.state.addons" :addon="addon"></Addon>
     </div>
 </template>
 
