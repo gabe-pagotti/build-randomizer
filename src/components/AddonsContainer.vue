@@ -10,10 +10,10 @@ export default {
 </script>
 
 <template>
-    <div class="">
+    <div class="mb-2">
         <h1 class="text-white font-bold mb-5">ADD-ONS</h1>
         <div class="flex gap-6">
-            <Addon v-for="addon in this.$store.state.selectedAddons" :addon="addon"/>
+            <Addon v-for="addon in this.$store.state.selectedAddons" :addon="addon" class="scale-90"/>
         </div>
     </div>
 </template>

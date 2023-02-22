@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <div class="flex h-72 w-full gap-7 xl:pr-20">
+    <div class="flex h-64 w-full gap-7 xl:pr-20">
         <PowerItemContainer />
         <OfferingContainer/>
     </div>
