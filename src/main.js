@@ -173,6 +173,13 @@ const store = createStore({
             state.offering = offering;
         },
         setPerk (state, perk) {
+            let index = state.selectedPerks.findIndex((item) => item.name === perk.name);
+
+            if (index === -1) {
+                index = state.selectedPerks.findIndex((item) => item.name === state.selectedPerk.name);
+                state.selectedPerks.splice(index, 1, perk);
+            }
+
             state.selectedPerk = perk;
         },
         setAddon (state, addon) {
