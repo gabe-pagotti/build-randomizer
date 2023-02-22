@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <div class="flex-row md:w-5/6 lg:w-3/6 divide-y divide-neutral-800">
+    <div class="flex-row md:w-5/6 lg:w-5/12 divide-y divide-neutral-800">
         <TopSection/>
         <SelectedPerks/>
         <StuffList/>

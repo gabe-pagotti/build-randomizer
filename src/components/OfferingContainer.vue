@@ -9,9 +9,9 @@ export default {
 </script>
 
 <template>
-    <div class="flex flex-col gap-3 mt-auto align-bottom p-5">
-        <h1 class="text-white font-bold">OFFERING</h1>
-        <Offering :offering="this.$store.state.offering"/>
+    <div class="flex flex-col gap-3 mt-auto align-bottom">
+        <h1 class="text-white font-bold ml-5">OFFERING</h1>
+        <Offering :offering="this.$store.state.offering" class="ml-5 pb-1"/>
     </div>
 </template>
 

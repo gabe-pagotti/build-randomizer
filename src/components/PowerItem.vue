@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <div class="grow">
+    <div class="grow basis-4/6">
         <h1 class="text-white font-bold mb-3">ITEM</h1>
         <PowerItemIcon :item="this.item"></PowerItemIcon>
     </div>

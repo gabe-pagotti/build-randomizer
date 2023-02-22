@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'loadout': "url('/images/loadout-2.jpg')",
+        'loadout': "url('/images/loadout-3.jpg')",
         'character-icon': "url('/images/icons/PanelScreen_I55.png')",
         'build-icon': "url('/images/icons/build.png')",
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",

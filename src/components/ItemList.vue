@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <div class="flex flex-wrap px-40 py-0">
+    <div class="flex flex-wrap px-28 py-0">
         <PowerItemIcon v-for="item in this.$store.state.items" :item="item"></PowerItemIcon>
         <PowerItemIcon v-for="item in this.$store.state.items" :item="item"></PowerItemIcon>
         <PowerItemIcon v-for="item in this.$store.state.items" :item="item"></PowerItemIcon>
