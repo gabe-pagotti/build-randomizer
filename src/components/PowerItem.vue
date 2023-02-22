@@ -8,8 +8,15 @@ export default {
         }
     },
     methods: {
+        select() {
+            this.$store.commit('setItem', this.item);
+            this.$router.push('/loadout/items');
+        }
     },
     computed: {
+        isSelected() {
+            return this.$store.state.item.name == this.item.name && this.$route.name == 'items';
+        }
     },
 }
 </script>
@@ -17,7 +24,7 @@ export default {
 <template>
     <div class="grow">
         <h1 class="text-white font-bold mb-3">ITEM</h1>
-        <div class="relative w-22 h-22 cursor-pointer bg-cover bg-black group inline-block" :class="getBackground(this.item.rarity)">
+        <div class="relative w-22 h-22 cursor-pointer bg-cover bg-black group inline-block" :class="getBackground(this.item.rarity)" @click="select">
             <div class="absolute bg-white w-0 h-0.5 top-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
             <div class="absolute bg-white w-0 h-0.5 bottom-0 left-1/2 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
             <div class="absolute bg-white w-0.5 h-0 left-0 top-1/2 transition-all duration-500 group-hover:h-full group-hover:top-0"></div>

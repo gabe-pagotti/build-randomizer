@@ -122,6 +122,7 @@ const store = createStore({
             item: itens[Math.floor(Math.random() * itens.length)],
             addons: addons,
             selectedAddons: shuffledAddons.slice(0, 2),
+            selectedAddon: null,
         }
     },
     mutations: {
@@ -130,6 +131,19 @@ const store = createStore({
         },
         setPerk (state, perk) {
             state.selectedPerk = perk;
+        },
+        setAddon (state, addon) {
+            let index = state.selectedAddons.findIndex((item) => item.name === addon.name);
+
+            if (index === -1) {
+                index = state.selectedAddons.findIndex((item) => item.name === state.selectedAddon.name);
+                state.selectedAddons.splice(index, 1, addon);
+            }
+
+            state.selectedAddon = addon;
+        },
+        setItem (state, item) {
+            state.item = item;
         }
     }
 })
