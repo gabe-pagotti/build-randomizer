@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <div class="pl-10">
+    <div class="pl-10 pt-5">
         <div class="flex flex-wrap gap-3 pl-10 py-0 justify-start">
             <PerkIcon v-for="perk in this.$store.state.perks" :perk="perk"></PerkIcon>
         </div>
