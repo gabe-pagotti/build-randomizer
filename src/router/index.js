@@ -23,6 +23,11 @@ const router = createRouter({
                 component: OfferingList
             },
             {
+                path: 'items',
+                name: 'items',
+                component: ItemList
+            },
+            {
                 path: 'perks',
                 name: 'perks',
                 component: PerkList

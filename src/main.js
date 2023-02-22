@@ -14,6 +14,7 @@ import PowerItem from './components/PowerItem.vue'
 import PowerItemContainer from './components/PowerItemContainer.vue';
 import Addon from './components/Addon.vue';
 import AddonsContainer from './components/AddonsContainer.vue';
+import PowerItemIcon from './components/PowerItemIcon.vue';
 
 import './assets/main.css'
 
@@ -87,12 +88,36 @@ const store = createStore({
         const shuffledPerks = perks.sort(() => 0.5 - Math.random());
         let selectedPerks = shuffledPerks.slice(0, 4);
 
-        let itens = [
+        let items = [
             {
                 name: 'Camping Aid Kit',
                 description: 'A rudimentary First Aid Kit which can save lives in emergencies, even if it\'s lacking some of its supplies.',
                 rarity: 'Common',
                 iconUrl: "/images/survivor/item/camping-aid-kit.webp",
+            },
+            {
+                name: 'Emergency Med-Kit',
+                description: 'A sturdy and well organised Med-Kit equipped with top condition emergency supplies.',
+                rarity: 'Rare',
+                iconUrl: "/images/survivor/item/emergency-med-kit.webp",
+            },
+            {
+                name: 'First Aid Kit',
+                description: 'A standard First Aid Kit with all the necessary equipment for treating common to more serious injuries.',
+                rarity: 'Uncommon',
+                iconUrl: "/images/survivor/item/first-aid-kit.webp",
+            },
+            {
+                name: 'Masquerade Med-Kit',
+                description: 'A festive Med-Kit with a shocking surprise, giving a whole new meaning to the term "Health Scare".',
+                rarity: 'Event',
+                iconUrl: "/images/survivor/item/masquerade-med-kit.webp",
+            },
+            {
+                name: 'Ranger Med-Kit',
+                description: 'A large metal box containing medical supplies aimed at emergency rescues in hard to reach, often isolated locations.',
+                rarity: 'Very Rare',
+                iconUrl: "/images/survivor/item/ranger-med-kit.webp",
             },
         ];
 
@@ -118,8 +143,8 @@ const store = createStore({
             selectedPerk: null,
             selectedPerks: selectedPerks,
             perks: perks,
-            itens: itens,
-            item: itens[Math.floor(Math.random() * itens.length)],
+            items: items,
+            item: items[Math.floor(Math.random() * items.length)],
             addons: addons,
             selectedAddons: shuffledAddons.slice(0, 2),
             selectedAddon: null,
@@ -163,6 +188,7 @@ app.component('LeftNavBar', LeftNavBar)
    .component('OfferingContainer', OfferingContainer)
    .component('PowerItem', PowerItem)
    .component('PowerItemContainer', PowerItemContainer)
+   .component('PowerItemIcon', PowerItemIcon)
    .component('Addon', Addon)
    .component('AddonsContainer', AddonsContainer)
    .mixin({
