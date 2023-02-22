@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="pl-10">
         <div class="flex flex-wrap gap-3 pl-10 py-0 justify-start">
             <Offering v-for="offering in this.$store.state.offerings" :offering="offering"></Offering>
         </div>
