@@ -19,6 +19,9 @@ module.exports = {
         'very-rare': "url('/images/bg-very-rare.webp')",
         'uncommon': "url('/images/bg-uncommon.webp')",
         'offering-rare': "url('/images/bg-offering-rare.webp')",
+        'perks': "url('/images/bg-perks.png')",
+        'item': "url('/images/bg-item.png')",
+        'offering': "url('/images/bg-offering.png')",
       },
       backgroundSize: {
         '70%': '70%',

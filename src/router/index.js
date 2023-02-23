@@ -15,6 +15,7 @@ const router = createRouter({
         },
         {
             path: '/loadout',
+            redirect: '/loadout/offerings',
             name: 'loadout',
             component: Loadout,
             children: [{

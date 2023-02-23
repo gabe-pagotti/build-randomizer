@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div id="app" class="w-screen h-screen bg-auto bg-no-repeat bg-loadout bg-contain">
-        <div class="flex min-h-screen bg-gray-500/50">
+    <div id="app" class="w-screen h-screen bg-cover bg-no-repeat bg-loadout bg-contain">
+        <div class="flex min-h-screen">
             <LeftNavBar/>
             <RouterView/>
         </div>
