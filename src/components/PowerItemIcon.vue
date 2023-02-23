@@ -3,10 +3,6 @@ export default {
     props: {
         "item": Object
     },
-    data() {
-        return {
-        }
-    },
     methods: {
         select() {
             this.$store.commit('setItem', this.item);

@@ -3,10 +3,6 @@ export default {
     props: {
         "addon": Object
     },
-    data() {
-        return {
-        }
-    },
     methods: {
         select() {
             this.$store.commit('setAddon', this.addon);

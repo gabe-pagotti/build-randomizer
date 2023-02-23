@@ -3,10 +3,6 @@ export default {
     props: {
         "perk": Object
     },
-    data() {
-        return {
-        }
-    },
     methods: {
         select() {
             this.$store.commit('setPerk', this.perk);

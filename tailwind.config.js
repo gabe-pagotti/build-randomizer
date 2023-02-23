@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'loadout': "url('/images/loadout-3.jpg')",
-        'character-icon': "url('/images/icons/PanelScreen_I55.png')",
+        'characters-icon': "url('/images/icons/characters.png')",
         'build-icon': "url('/images/icons/build.png')",
         'bloodweb-icon': "url('/images/icons/bloodweb.png')",
         'shop-icon': "url('/images/icons/shop.png')",

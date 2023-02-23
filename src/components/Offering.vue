@@ -3,10 +3,6 @@ export default {
     props: {
         "offering": Object
     },
-    data() {
-        return {
-        }
-    },
     methods: {
         select() {
             this.$store.commit('setOffering', this.offering);
@@ -22,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <div class="basis-1/6 grow-0">
+    <div class="basis-1/6 grow-0 mb-2">
         <div class="relative cursor-pointer bg-offering-rare bg-contain bg-no-repeat bg-center w-28 h-28" @click="select">
             <img src="/images/icons/offering-active.png" class="absolute" id="active" v-show="isSelected">
             <img id="icon" :src="this.offering.iconUrl">

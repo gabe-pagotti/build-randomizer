@@ -1,22 +1,22 @@
-import { createApp } from 'vue'
-import { createStore } from 'vuex'
-import App from './App.vue'
-import router from './router'
-import LeftNavBar from './components/LeftNavBar.vue'
-import PerkIcon from './components/PerkIcon.vue'
-import SelectedPerks from './components/SelectedPerks.vue'
-import StuffList from './components/StuffList.vue'
-import TopSection from './components/TopSection.vue'
-import NavLink from './components/NavLink.vue'
-import Offering from './components/Offering.vue'
-import OfferingContainer from './components/OfferingContainer.vue'
-import PowerItem from './components/PowerItem.vue'
-import PowerItemContainer from './components/PowerItemContainer.vue';
+import { createApp } from 'vue';
+import { createStore } from 'vuex';
+import { RouterView } from 'vue-router';
 import Addon from './components/Addon.vue';
 import AddonsContainer from './components/AddonsContainer.vue';
+import App from './App.vue';
+import LeftNavBar from './components/LeftNavBar.vue';
+import NavLink from './components/NavLink.vue';
+import Offering from './components/Offering.vue';
+import OfferingContainer from './components/OfferingContainer.vue';
+import PerkIcon from './components/PerkIcon.vue';
+import PowerItem from './components/PowerItem.vue';
+import PowerItemContainer from './components/PowerItemContainer.vue';
 import PowerItemIcon from './components/PowerItemIcon.vue';
-
-import './assets/main.css'
+import router from './router';
+import SelectedPerks from './components/SelectedPerks.vue';
+import StuffList from './components/StuffList.vue';
+import TopSection from './components/TopSection.vue';
+import './assets/main.css';
 
 const store = createStore({
     state () {
@@ -198,12 +198,11 @@ const store = createStore({
     }
 })
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.use(store)
-app.use(router)
-
-app.component('LeftNavBar', LeftNavBar)
+   .use(router)
+   .component('LeftNavBar', LeftNavBar)
    .component('PerkIcon', PerkIcon)
    .component('SelectedPerks', SelectedPerks)
    .component('StuffList', StuffList)
@@ -216,6 +215,7 @@ app.component('LeftNavBar', LeftNavBar)
    .component('PowerItemIcon', PowerItemIcon)
    .component('Addon', Addon)
    .component('AddonsContainer', AddonsContainer)
+   .component('RouterView', RouterView)
    .mixin({
         methods: {
             getBackground: function (rarity) {
@@ -238,6 +238,5 @@ app.component('LeftNavBar', LeftNavBar)
                 }
             },
         },
-    });
-
-app.mount('#app')
+    })
+    .mount('#app');
